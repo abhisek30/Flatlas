@@ -1,4 +1,4 @@
-package `in`.avinia.flatlas
+package `in`.avinia.flatlas.presentation.ui.dashboard
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,40 +8,21 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import `in`.avinia.flatlas.ui.theme.FlatlasTheme
+import dagger.hilt.android.AndroidEntryPoint
+import `in`.avinia.flatlas.presentation.theme.FlatlasTheme
 
-class MainActivity : ComponentActivity() {
+@AndroidEntryPoint
+class DashboardActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             FlatlasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Text("Dashboard", modifier = Modifier.padding(innerPadding))
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FlatlasTheme {
-        Greeting("Android")
     }
 }

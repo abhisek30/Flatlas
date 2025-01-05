@@ -1,4 +1,4 @@
-package `in`.avinia.flatlas.ui.theme
+package `in`.avinia.flatlas.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
